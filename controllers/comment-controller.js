@@ -8,6 +8,7 @@ const CommentController = {
     if (!postId || !content) {
       return res.status(400).json({ error: "Все поля обязательны" });
     }
+
     try {
       const comment = await prisma.comment.create({
         data: {
